@@ -64,9 +64,8 @@ node default {
   }
 
   # node versions
-  nodejs::version { 'v0.6': }
-  nodejs::version { 'v0.8': }
   nodejs::version { 'v0.10': }
+  nodejs::version { 'v0.12': }
 
   # default ruby versions
   ruby::version { '1.9.3': }
@@ -74,6 +73,10 @@ node default {
   ruby::version { '2.1.0': }
   ruby::version { '2.1.1': }
   ruby::version { '2.1.2': }
+
+  # python versions
+  python::version { '2.6': }
+  python::version { '2.7': }
 
   # common, useful packages
   package {
@@ -84,7 +87,7 @@ node default {
     ]:
   }
 
-  file { "${boxen::config::srcdir}/our-boxen":
+  file { "${boxen::config::srcdir}/my-boxen":
     ensure => link,
     target => $boxen::config::repodir
   }
