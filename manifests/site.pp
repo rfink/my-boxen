@@ -75,8 +75,6 @@ node default {
   ruby::version { '2.1.2': }
 
   # python versions
-  python::version { '2.6': }
-  python::version { '2.7': }
 
   # common, useful packages
   package {
