@@ -64,6 +64,7 @@ node default {
   include hub
   include iterm2::stable
   include java
+  include libtool
   include mongodb
   include mysql
   include nginx
