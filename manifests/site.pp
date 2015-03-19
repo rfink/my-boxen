@@ -54,6 +54,7 @@ Homebrew::Formula <| |> -> Package <| |>
 node default {
   # core modules, needed for most things
   include apache
+  include autoconf
   include better_touch_tools
   include chrome
   include docker

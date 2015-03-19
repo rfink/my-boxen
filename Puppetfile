@@ -39,6 +39,7 @@ github "module_data", "0.0.3", :repo => "ripienaar/puppet-module-data"
 # some/most of these if you want, but it's not recommended.
 
 github "apache",      "0.0.2", :repo => "mattheath/puppet-apache"
+github "autoconf",    "1.0.0"
 github "better_touch_tools", "3.0.0"
 github "brewcask",    "0.0.6"
 github "chrome",      "1.2.0"
