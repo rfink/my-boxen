@@ -71,6 +71,7 @@ node default {
   include nodejs
   include nsq
   include openssl
+  include pcre
   include phantomjs
   include php::5_5
   include pycharm
