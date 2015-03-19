@@ -70,7 +70,7 @@ node default {
   include nsq
   include openssl
   include phantomjs
-  include php
+  include php::5_5
   include pycharm
   include redis
   include sequel_pro
