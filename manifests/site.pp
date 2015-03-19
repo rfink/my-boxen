@@ -53,10 +53,29 @@ Homebrew::Formula <| |> -> Package <| |>
 
 node default {
   # core modules, needed for most things
+  include apache
+  include better_touch_tools
+  include chrome
+  include docker
   include dnsmasq
   include git
+  include go
   include hub
+  include iterm2::stable
+  include java
+  include mongodb
+  include mysql
   include nginx
+  include nodejs
+  include nsq
+  include openssl
+  include phantomjs
+  include php
+  include pycharm
+  include redis
+  include sequel_pro
+  include webstorm
+  include wget
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
