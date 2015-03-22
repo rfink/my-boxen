@@ -53,12 +53,17 @@ Homebrew::Formula <| |> -> Package <| |>
 
 node default {
   # core modules, needed for most things
+  include android::sdk
+  include android::studio
   include apache
   include autoconf
+  include awscli
   include better_touch_tools
   include chrome
   include docker
+  include diffmerge
   include dnsmasq
+  #include filezilla
   include git
   include go
   include hub
@@ -66,6 +71,7 @@ node default {
   include java
   include libpng
   include libtool
+  include liteide
   include mongodb
   include mysql
   include nginx
@@ -76,8 +82,11 @@ node default {
   include phantomjs
   include php::5_5
   include pycharm
+  include r
+  include rstudio
   include redis
   include sequel_pro
+  include virtualbox
   include webstorm
   include wget
 
@@ -86,9 +95,12 @@ node default {
     fail('Please enable full disk encryption and try again')
   }
 
-  # node versions
-  nodejs::version { 'v0.10': }
-  nodejs::version { 'v0.12.0': }
+  # node global modules
+  nodejs::module { 'bower': node_version => 'v0.12.0' }
+  nodejs::module { 'grunt-cli': node_version => 'v0.12.0' }
+  nodejs::module { 'gulp': node_version => 'v0.12.0' }
+  nodejs::module { 'duo': node_version => 'v0.12.0' }
+  nodejs::module { 'retire': node_version => 'v0.12.0' }
 
   # default ruby versions
   ruby::version { '1.9.3': }
@@ -96,8 +108,6 @@ node default {
   ruby::version { '2.1.0': }
   ruby::version { '2.1.1': }
   ruby::version { '2.1.2': }
-
-  # python versions
 
   # common, useful packages
   package {

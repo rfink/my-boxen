@@ -23,7 +23,8 @@ end
 
 # Shortcut for a module under development
 def dev(name, *args)
-  mod "puppet-#{name}", :path => "#{ENV['HOME']}/src/boxen/puppet-#{name}"
+  #mod "puppet-#{name}", :path => "#{ENV['HOME']}/src/boxen/puppet-#{name}"
+  mod "puppet-#{name}", :path => "#{ENV['HOME']}/code/puppet-#{name}"
 end
 
 # Includes many of our custom types and providers, as well as global
@@ -38,46 +39,58 @@ github "module_data", "0.0.3", :repo => "ripienaar/puppet-module-data"
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
 
+github "android",     "1.4.0"
 github "apache",      "0.0.2", :repo => "mattheath/puppet-apache"
 github "autoconf",    "1.0.0"
+github "awscli",      "1.1.1", :repo => "justindowning/puppet-awscli"
 github "better_touch_tools", "3.0.0"
 github "brewcask",    "0.0.6"
 github "chrome",      "1.2.0"
+github "diffmerge",   "1.1",   :repo => "brockoffdev/puppet-diffmerge"
 github "dnsmasq",     "2.0.1"
 github "docker",      "0.9.0"
+github "filezilla",   "1.0.0", :repo => "dieterdemeyer/puppet-filezilla"
+github "firefox",     "1.2.3"
 github "foreman",     "1.2.0"
 github "gcc",         "2.2.0"
 github "git",         "2.7.5"
-github "go",          "2.1.0"
+#github "go",          "2.1.0"
 github "homebrew",    "1.11.2"
 github "hub",         "1.4.0"
 github "inifile",     "1.1.1", :repo => "puppetlabs/puppetlabs-inifile"
 github "iterm2",      "1.2.4"
-github "java",        "1.6.0"
+github "java",        "1.8.2"
 github "libpng",      "1.0.0"
 github "libtool",     "1.0.0"
+github "liteide",     "0.0.0", :repo => "rfink/puppet-liteide"
 github "mongodb",     "1.3.3"
 github "mysql",       "1.99.992"
 github "nginx",       "1.4.4"
-github "nodejs",      "4.0.0"
+#github "nodejs",      "4.0.0"
 github "nsq",         "1.0.1"
-github "nvm",         "1.0.0"
+#github "nvm",         "1.0.0"
 github "openssl",     "1.0.0"
 github "pcre",        "1.0.0"
 github "phantomjs",   "2.3.0"
 github "php",         "1.2.6"
 github "pkgconfig",   "1.0.0"
-github "pycharm",     "1.0.4"
+github "pycharm",     "1.1.0", :repo => "rfink/puppet-pycharm"
 github "python",      "2.0.0"
+github "r",           "0.1.0", :repo => "rfink/puppet-r"
+github "rstudio",     "1.0.0", :repo => "taoistmath/puppet-rstudio"
 github "redis",       "3.1.0"
 github "repository",  "2.3.0"
 github "ruby",        "8.1.7"
 github "sequel_pro",  "1.0.1"
 github "stdlib",      "4.2.1", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
+github "virtualbox",  "1.0.13"
 github "webstorm",    "1.1.1"
 github "wget",        "1.0.1"
 github "xquartz",     "1.2.1"
+
+dev "go"
+dev "nodejs"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
